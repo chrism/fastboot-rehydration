@@ -67,4 +67,60 @@ An easy way to check this is to CURL the URL like this
 curl 'http://localhost:4200/' -H 'Accept: text/html'
 ```
 
-The response should include the HTML in the output like.
+The response should include the HTML in the output like this, which shows Fastboot is working...
+
+```
+<!-- EMBER_CLI_FASTBOOT_TITLE -->
+
+    <link integrity="" rel="stylesheet" href="/assets/vendor.css">
+    <link integrity="" rel="stylesheet" href="/assets/fastboot-rehydration.css">
+
+
+  </head>
+  <body>
+    <script type="x/boundary" id="fastboot-body-start"></script><div class="ember-view" id="ember275"><h1>Fastboot Rehydration</h1>
+
+<ul>
+    <li>Project 0</li>
+    <li>Project 1</li>
+</ul>
+
+<!---->
+</div><script type="x/boundary" id="fastboot-body-end"></script>
+```
+
+### Step 3 — Fastboot with Heroku
+
+Deploying Fastboot to Heroku is as simple as...
+
+```
+git push heroku master
+```
+
+Checking with CURL shows that the response is also correctly including the HTML.
+
+```
+curl 'http://fastboot-rehydration.herokuapp.com/' -H 'Accept: text/html'
+```
+
+```
+<!-- EMBER_CLI_FASTBOOT_TITLE -->
+
+    <link integrity="" rel="stylesheet" href="/assets/vendor-d41d8cd98f00b204e9800998ecf8427e.css">
+    <link integrity="" rel="stylesheet" href="/assets/fastboot-rehydration-d41d8cd98f00b204e9800998ecf8427e.css">
+
+
+  </head>
+  <body>
+    <script type="x/boundary" id="fastboot-body-start"></script><div class="ember-view" id="ember264"><h1>Fastboot Rehydration</h1>
+
+<ul>
+    <li>Project 0</li>
+    <li>Project 1</li>
+</ul>
+
+<!---->
+</div><script type="x/boundary" id="fastboot-body-end"></script>
+```
+
+### Step 4 — Rehydration!
