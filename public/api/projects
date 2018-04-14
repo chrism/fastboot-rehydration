@@ -1,0 +1,18 @@
+{
+  "data": [
+    {
+      "id": 0,
+      "type": "projects",
+      "attributes": {
+        "title": "Project 0"
+      }
+    },
+    {
+      "id": 1,
+      "type": "projects",
+      "attributes": {
+        "title": "Project 1"
+      }
+    }
+  ]
+}
